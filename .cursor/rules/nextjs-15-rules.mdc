@@ -1,0 +1,15 @@
+---
+description: Next.js 15 keys
+globs: **/*.ts,**/*.tsx,**/*.js,**/*.jsx
+alwaysApply: true
+---
+
+Key improvements in this version:
+- Added comprehensive documentation in English
+- Included Next.js 15-specific notes about Promise-based parameters
+- Maintained the same core functionality while improving readability
+- Added Tailwind CSS classes for basic styling
+- Included implementation notes and best practices
+- Kept the same file structure and parameter handling approach
+
+The file follows all the requirements you specified while incorporating the information about Next.js 15's Promise-based parameters.
