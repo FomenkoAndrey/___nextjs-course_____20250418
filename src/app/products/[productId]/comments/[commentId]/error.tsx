@@ -1,15 +1,30 @@
 'use client'
 
+import { startTransition, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
 interface ErrorProps {
   error: Error
   reset: () => void
 }
 
 export default function Error({ error, reset }: ErrorProps) {
+  useEffect(() => {
+    console.error(error.message)
+  }, [error])
+
+  const router = useRouter()
+  const reload = () => {
+    startTransition(() => {
+      router.refresh()
+      reset()
+    })
+  }
+
   return (
-    <div className="text-red-500 font-bold text-2xl text-center my-6">
-      Error: {error.message}
-      <button className="bg-blue-500 text-white px-4 py-2 rounded-md" onClick={() => reset()}>
+    <div>
+      <h1 className="text-red-500 text-3xl font-bold inline-block mb-4">{error.message}</h1>
+      <button className="bg-blue-500 text-white px-4 py-2 rounded-md" onClick={() => reload()}>
         Try again
       </button>
     </div>

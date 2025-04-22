@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 
-interface CommentPageProps {
+interface CommentDetailsProps {
   params: Promise<{
     productId: string
     commentId: string
@@ -11,12 +11,12 @@ function randomNumber(max: number) {
   return Math.floor(Math.random() * max)
 }
 
-export default async function Comment({ params }: CommentPageProps) {
-  const random = randomNumber(4)
+export default async function CommentDetails({ params }: CommentDetailsProps) {
   const { productId, commentId } = await params
+  const random = randomNumber(2)
 
   console.log(random)
-  if (random) {
+  if (!random) {
     throw new Error('Random error message')
   }
 
@@ -25,8 +25,8 @@ export default async function Comment({ params }: CommentPageProps) {
   }
 
   return (
-    <div>
-      Comment {commentId} for Product {productId}
-    </div>
+    <h1>
+      Comment {commentId} for product {productId}
+    </h1>
   )
 }
