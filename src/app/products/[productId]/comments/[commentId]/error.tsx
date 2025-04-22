@@ -22,8 +22,8 @@ export default function Error({ error, reset }: ErrorProps) {
   }
 
   return (
-    <div>
-      <h1 className="text-red-500 text-3xl font-bold inline-block mb-4">{error.message}</h1>
+    <div className="flex items-center justify-center mb-4">
+      <h1 className="text-red-500 text-3xl font-bold inline-block mr-4">{error.message}</h1>
       <button className="bg-blue-500 text-white px-4 py-2 rounded-md" onClick={() => reload()}>
         Try again
       </button>
