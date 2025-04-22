@@ -5,5 +5,10 @@ interface AuthLayoutProps {
 }
 
 export default function AuthLayout({ children }: AuthLayoutProps) {
-  return <div className="bg-amber-200 p-8">{children}</div>
+  return (
+    <div className="bg-amber-200 p-8">
+      <h1>With Auth Layout</h1>
+      {children}
+    </div>
+  )
 }
