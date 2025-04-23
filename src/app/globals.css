@@ -2,11 +2,11 @@
 
 html {
   @apply overflow-y-scroll;
-  min-height: calc(100vh + 1px);
 }
 
-body {
-  @apply overflow-y-auto;
+.main-container {
+  @apply bg-white py-10;
+  min-height: calc(100vh + -263px);
 }
 
 .header-title {

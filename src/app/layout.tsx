@@ -35,7 +35,7 @@ export default function RootLayout({
             <Navbar />
           </div>
         </header>
-        <main className="bg-white py-10">
+        <main className="main-container">
           <div className="container mx-auto px-4">{children}</div>
         </main>
         <footer className="bg-indigo-400 py-10">

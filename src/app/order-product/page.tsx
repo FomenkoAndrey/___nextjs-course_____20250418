@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
+import Button from '../../components/Button'
 
 export default function OrderProduct() {
   const router = useRouter()
@@ -17,12 +18,12 @@ export default function OrderProduct() {
     <div>
       <h1 className="header-title">Order product</h1>
       <div className="flex justify-center items-center gap-6">
-        <button onClick={orderProductHandler} className="btn btn-primary">
+        <Button variant="primary" onClick={orderProductHandler}>
           Go to products
-        </button>
-        <button onClick={goToRootPageHandler} className="btn btn-secondary">
+        </Button>
+        <Button variant="secondary" onClick={goToRootPageHandler}>
           Go to root page
-        </button>
+        </Button>
       </div>
     </div>
   )
