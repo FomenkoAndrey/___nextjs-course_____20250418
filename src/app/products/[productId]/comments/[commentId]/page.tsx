@@ -25,7 +25,7 @@ export default async function CommentDetails({ params }: CommentDetailsProps) {
   }
 
   return (
-    <h1>
+    <h1 className="header-title">
       Comment {commentId} for product {productId}
     </h1>
   )

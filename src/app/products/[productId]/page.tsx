@@ -40,5 +40,5 @@ export const generateMetadata = async ({ params }: generateMetadataProps) => {
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { productId } = await params
-  return <h1>Product Details Page for {productId}</h1>
+  return <h1 className="header-title">Product Details Page for {productId}</h1>
 }

@@ -10,7 +10,7 @@ export default async function Page() {
     <ul>
       {todos.map((todo) => (
         <li key={todo.id} className="mb-4">
-          <h2 className="text-lg font-semibold">Заголовок: {todo.title}</h2>
+          <h2 className="header-title-h2">Заголовок: {todo.title}</h2>
           <p className="text-gray-600">Статус: {todo.completed ? 'Завершено' : 'Не завершено'}</p>
         </li>
       ))}

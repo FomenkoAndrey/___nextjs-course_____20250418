@@ -15,7 +15,7 @@ export default function OrderProduct() {
 
   return (
     <div>
-      <h1 className="page-title">Order product</h1>
+      <h1 className="header-title">Order product</h1>
       <button
         onClick={orderProductHandler}
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
