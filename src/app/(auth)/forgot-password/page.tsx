@@ -1,3 +1,3 @@
 export default function ForgotPasswordPage() {
-  return <div>Forgot Password Page</div>
+  return <h1 className="header-title">Forgot Password Page</h1>
 }
