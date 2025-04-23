@@ -8,7 +8,8 @@ const navItems = [
   { href: '/products', label: 'Products' },
   { href: '/login', label: 'Login' },
   { href: '/register', label: 'Register' },
-  { href: '/order-product', label: 'Order Product' }
+  { href: '/forgot-password', label: 'Forgot Password' },
+  { href: '/order-product', label: 'Order' }
 ]
 
 const Navbar = () => {

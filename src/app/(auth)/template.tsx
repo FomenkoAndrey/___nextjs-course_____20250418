@@ -24,31 +24,33 @@ const navLinks = [
 ]
 
 export default function AuthLayout({ children }: AuthLayoutProps) {
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState('initial value')
   const pathname = usePathname()
 
   return (
     <div>
-      <input
-        className="border-2 block my-8 p-3"
-        type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value.trim())}
-      />
-
-      {navLinks.map((link) => {
-        const isActive = pathname === link.href
-        return (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={`font-bold text-black mr-4 border-2 p-2 inline-block ${isActive ? 'bg-red-400' : ''}`}
-          >
-            {link.label}
-          </Link>
-        )
-      })}
       {children}
+      <div>
+        <input
+          className="border-2 block my-8 p-3"
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value.trim())}
+        />
+
+        {navLinks.map((link) => {
+          const isActive = pathname === link.href
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`font-bold text-black mr-4 border-2 p-2 inline-block ${isActive ? 'bg-red-400' : ''}`}
+            >
+              {link.label}
+            </Link>
+          )
+        })}
+      </div>
     </div>
   )
 }
