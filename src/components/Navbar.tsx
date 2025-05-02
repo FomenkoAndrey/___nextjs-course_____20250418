@@ -1,5 +1,6 @@
 'use client'
 import NavLink from './NavLink'
+import { MdOutlineDashboard } from 'react-icons/md'
 import {
   FaHome,
   FaInfoCircle,
@@ -8,18 +9,21 @@ import {
   FaShoppingBag,
   FaSignInAlt,
   FaUserPlus,
-  FaKey
+  FaKey,
+  FaImages
 } from 'react-icons/fa'
 
 const navItems = [
-  { href: '/', label: <FaHome className="text-xl" />, isIcon: true, tooltip: 'Головна' },
-  { href: '/info', label: <FaInfoCircle className="text-xl" />, isIcon: true, tooltip: 'Інформація' },
-  { href: '/posts', label: <FaNewspaper className="text-xl" />, isIcon: true, tooltip: 'Статті' },
-  { href: '/products', label: <FaBoxOpen className="text-xl" />, isIcon: true, tooltip: 'Товари' },
-  { href: '/order-product', label: <FaShoppingBag className="text-xl" />, isIcon: true, tooltip: 'Замовлення' },
-  { href: '/login', label: <FaSignInAlt className="text-xl" />, isIcon: true, tooltip: 'Вхід' },
-  { href: '/register', label: <FaUserPlus className="text-xl" />, isIcon: true, tooltip: 'Реєстрація' },
-  { href: '/forgot-password', label: <FaKey className="text-xl" />, isIcon: true, tooltip: 'Забули пароль' }
+  { href: '/', label: <FaHome className="text-xl" />, isIcon: true, tooltip: 'Home' },
+  { href: '/gallery', label: <FaImages className="text-xl" />, isIcon: true, tooltip: 'Gallery' },
+  { href: '/info', label: <FaInfoCircle className="text-xl" />, isIcon: true, tooltip: 'Info' },
+  { href: '/posts', label: <FaNewspaper className="text-xl" />, isIcon: true, tooltip: 'Posts' },
+  { href: '/products', label: <FaBoxOpen className="text-xl" />, isIcon: true, tooltip: 'Products' },
+  { href: '/order-product', label: <FaShoppingBag className="text-xl" />, isIcon: true, tooltip: 'Order Product' },
+  { href: '/login', label: <FaSignInAlt className="text-xl" />, isIcon: true, tooltip: 'Login' },
+  { href: '/register', label: <FaUserPlus className="text-xl" />, isIcon: true, tooltip: 'Register' },
+  { href: '/forgot-password', label: <FaKey className="text-xl" />, isIcon: true, tooltip: 'Forgot Password' },
+  { href: '/dashboard', label: <MdOutlineDashboard className="text-xl" />, isIcon: true, tooltip: 'Dashboard' }
 ]
 
 const Navbar = () => {

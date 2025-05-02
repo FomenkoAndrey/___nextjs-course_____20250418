@@ -6,5 +6,5 @@ export const metadata: Metadata = {
 }
 
 export default function FirstPost() {
-  return <div>FirstPost</div>
+  return <h1 className="header-title">First Post</h1>
 }

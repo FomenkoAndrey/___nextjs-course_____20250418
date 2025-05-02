@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 }
 
 export default function SecondPost() {
-  return <div>SecondPost</div>
+  return <h1 className="header-title">Second Post</h1>
 }

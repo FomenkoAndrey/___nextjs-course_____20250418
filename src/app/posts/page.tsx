@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Loading from './loading'
+import Link from 'next/link'
 
 interface Post {
   id: number
@@ -20,7 +21,7 @@ function PostsList() {
         setLoading(true)
         await new Promise((resolve) => setTimeout(resolve, 2000))
 
-        const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+        const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
 
         if (!res.ok) {
           throw new Error(`Помилка: ${res.status}`)
@@ -58,6 +59,19 @@ export default function Posts() {
   return (
     <div>
       <h1 className="header-title">Posts Page</h1>
+      <div>
+        <div className="flex gap-4 justify-center mb-8">
+          <Link href="/posts/second" className="btn btn-primary">
+            Second Post
+          </Link>
+          <Link href="/posts/first" className="btn btn-secondary">
+            First Post
+          </Link>
+          <Link href="/posts/third" className="btn btn-primary">
+            Third Post
+          </Link>
+        </div>
+      </div>
       <PostsList />
     </div>
   )
